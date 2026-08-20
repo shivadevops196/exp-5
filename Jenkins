@@ -1,0 +1,14 @@
+pipeline {
+agent any
+stages {
+stages('compile'){
+steps {
+sh 'javac Helloworld.java'
+}
+}
+stage('Run'){
+steps{
+sh 'java Helloworld'
+}
+}
+}
